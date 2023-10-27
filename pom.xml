@@ -33,7 +33,22 @@
                     <mainClass>org.example.Main</mainClass>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>org.example.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
         </plugins>
+
+        <finalName>${project.artifactId}</finalName>
+
     </build>
 
     <properties>
